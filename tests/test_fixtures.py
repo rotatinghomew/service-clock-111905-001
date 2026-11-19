@@ -4,8 +4,8 @@ import unittest
 
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures"
-HEADERS = {'cases': ['id', 'kind', 'received', 'grid', 'commitment'], 'commitments': ['id', 'start', 'clock', 'limit_min', 'notice_min', 'pause_reason'], 'calendar': ['day', 'open', 'close'], 'work': ['id', 'case_id', 'commitment', 'prerequisite', 'action'], 'events': ['id', 'case_id', 'work_id', 'kind', 'occurred', 'recorded', 'owner', 'detail', 'supersedes'], 'notices': ['id', 'work_id', 'owner', 'action', 'status', 'as_of', 'due']}
-LINKS = [('work', 'case_id', 'cases', 'id'), ('events', 'case_id', 'cases', 'id'), ('notices', 'work_id', 'work', 'id')]
+HEADERS = {'appointment_slots': ['id', 'owner', 'skill', 'start', 'end', 'capacity'], 'appointments': ['id', 'work', 'slots', 'start', 'end', 'sent', 'resident_confirmed', 'canceled_confirmed'], 'calendar': ['day', 'open', 'close'], 'cases': ['id', 'kind', 'received', 'grid', 'commitment'], 'commitments': ['id', 'start', 'clock', 'limit_min', 'notice_min', 'pause_reason'], 'events': ['id', 'case_id', 'work_id', 'kind', 'occurred', 'recorded', 'owner', 'detail', 'supersedes'], 'notices': ['id', 'work_id', 'owner', 'action', 'status', 'as_of', 'due'], 'slot_requirements': ['work', 'skill', 'role', 'duration_min'], 'work': ['id', 'case_id', 'commitment', 'prerequisite', 'action']}
+LINKS = [('work', 'case_id', 'cases', 'id'), ('events', 'case_id', 'cases', 'id'), ('notices', 'work_id', 'work', 'id'), ('slot_requirements', 'work', 'work', 'id'), ('appointments', 'work', 'work', 'id')]
 
 
 def read(name):
