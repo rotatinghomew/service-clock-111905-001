@@ -1,6 +1,0 @@
-id,start,clock,limit_min,notice_min,pause_reason
-K1,received,elapsed,120,20,
-K2,received,open,480,60,
-W1,accepted,open,180,45,居民补证
-W2,ready,open,90,30,
-W3,accepted,elapsed,120,30,

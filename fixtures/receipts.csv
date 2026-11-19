@@ -1,0 +1,4 @@
+receipt_id,case_id,kind,occurred_from,occurred_to,received,supersedes
+E1,C1,handoff,08:40,08:50,08:55,
+E2,C1,notice,09:00,09:00,09:01,
+E3,C1,arrival,10:00,10:15,10:20,

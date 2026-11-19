@@ -1,0 +1,4 @@
+case_id,window,owner,skill,start,end,pause,revision
+C1,W1,U1,inspect,08:10,09:00,,R1
+C1,W2,U2,repair,08:10,09:00,,R1
+C2,W1,U1,inspect,08:30,09:10,,R1
