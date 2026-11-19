@@ -1,3 +1,6 @@
-case_id,grid,received,resident_window,minutes,revision
-C1,G1,08:00,10:00-10:30,90,R1
-C2,G1,08:20,10:00-10:30,60,R1
+id,grid,intake,due_minutes,duration
+C1,北区,08:00,60,30
+C2,北区,08:15,45,30
+C3,南区,08:40,75,30
+C4,南区,09:00,60,30
+C5,北区,09:15,50,30

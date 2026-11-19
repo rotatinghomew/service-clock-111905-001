@@ -18,3 +18,23 @@ class SourceRecords(unittest.TestCase):
                 if "id" in reader.fieldnames:
                     ids = [row["id"] for row in rows]
                     self.assertEqual(len(ids), len(set(ids)))
+
+    def test_business_references(self):
+        tables = {}
+        for path in FIXTURES.glob("*.csv"):
+            with path.open(encoding="utf-8", newline="") as source:
+                tables[path.stem] = list(csv.DictReader(source))
+        links = (
+            ('duties', 'case', 'terms', 'id'),
+            ('duties', 'prerequisite', 'duties', 'id'),
+            ('appointments', 'case', 'terms', 'id'),
+            ('appointments', 'prior', 'appointments', 'id'),
+            ('shifts', 'supersedes', 'shifts', 'id'),
+            ('receipts', 'supersedes', 'receipts', 'id'),
+        )
+        for child, field, parent, key in links:
+            with self.subTest(table=child, field=field):
+                known = {row[key] for row in tables[parent]}
+                for row in tables[child]:
+                    if row[field]:
+                        self.assertIn(row[field], known)

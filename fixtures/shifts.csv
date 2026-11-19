@@ -1,0 +1,7 @@
+id,resource,window,skills,start,end,received,supersedes
+S1,U1,W1,inspect;review,08:00,12:00,07:45,
+S2,U2,W2,repair,08:00,12:00,07:45,
+S3,U3,W2,repair,09:00,11:30,07:45,
+S4,U4,W1,inspect,09:30,12:00,07:45,
+S5,ROOM,,site,09:30,12:00,07:45,
+S6,U2,W2,repair,08:00,10:45,10:03,S2

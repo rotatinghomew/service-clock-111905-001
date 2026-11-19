@@ -1,0 +1,9 @@
+id,case,start,end,resources,kind,prior,expires,received
+B1,C1,10:00,10:30,U1;U2;ROOM,original,,,08:20
+B2,C2,10:30,11:00,U1;U2;ROOM,protected,,,08:21
+B3,C3,11:00,11:30,U3,protected,,,08:45
+B4,C4,10:00,10:30,U4,protected,,,09:10
+B5,C1,10:30,11:00,U4;U3;ROOM,proposal,B1,09:58,09:30
+B6,C1,11:00,11:30,U4;U2;ROOM,proposal,B1,10:10,09:32
+B7,C5,11:00,11:30,U4;U3;ROOM,proposal,,10:10,09:36
+B8,C1,09:30,10:00,U4;U3;ROOM,proposal,B1,09:39,09:37
