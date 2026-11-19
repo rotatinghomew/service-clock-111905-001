@@ -1,0 +1,4 @@
+id,case_id,commitment,prerequisite,action
+A,C1,W1,,通行核实
+B,C1,W2,A,设施检查
+D,C1,W3,,预约告知
